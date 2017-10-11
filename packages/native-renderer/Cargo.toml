@@ -1,0 +1,17 @@
+[package]
+name = "rsx-native-renderer"
+version = "0.1.0"
+authors = ["Victor Porof <victor.porof@gmail.com>"]
+
+[lib]
+name = "rsx_native_renderer"
+
+[features]
+default = ["enabled"]
+enabled = ["gleam", "servo-glutin", "webrender"]
+
+[dependencies]
+gleam = { version = "0.4.15", optional = true }
+rsx-shared = { git = "https://github.com/victorporof/rsx-shared.git", default-features = false }
+servo-glutin = { version = "0.13", optional = true }
+webrender = { git = "https://github.com/victorporof/webrender.git", branch = "rsx-ready-latest", optional = true }

@@ -1,0 +1,40 @@
+{
+  "name": "rsx-renderers",
+  "version": "1.0.0",
+  "description": "RSX Renderers",
+  "repository": "https://github.com/victorporof/rsx-renderers",
+  "main": "./dist/lib.js",
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Porof <victor.porof@gmail.com>",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=9.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.2.1",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "del": "3.0.0",
+    "eslint": "4.16.0",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-import": "2.8.0",
+    "fs-extra": "5.0.0",
+    "gulp": "4.0.0",
+    "gulp-babel": "7.0.0",
+    "gulp-sourcemaps": "2.6.3",
+    "webpack": "3.10.0"
+  },
+  "dependencies": {
+    "color": "2.0.1",
+    "detect-browser": "2.3.0",
+    "fontfaceobserver": "2.0.13",
+    "pixi.js": "4.7.0"
+  }
+}
