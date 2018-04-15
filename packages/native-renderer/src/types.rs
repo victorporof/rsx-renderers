@@ -75,6 +75,9 @@ where
             .build()
             .unwrap();
 
+        window.set_position(i32::min_value(), i32::min_value());
+        window.set_inner_size(0, 0);
+
         unsafe {
             window.make_current().ok();
         }
@@ -116,13 +119,10 @@ where
                 current_height as f32 / current_device_pixel_ratio
             );
 
-            let should_set_window_position = runtime.should_set_window_position();
-            let should_set_window_size = runtime.should_set_window_size();
-
-            if let Some(position) = should_set_window_position {
+            if let Some(position) = runtime.should_set_window_position() {
                 window.set_position(position.0, position.1);
             }
-            if let Some(size) = should_set_window_size {
+            if let Some(size) = runtime.should_set_window_size() {
                 window.set_inner_size(size.0, size.1);
             }
 
